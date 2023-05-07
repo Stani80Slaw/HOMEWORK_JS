@@ -150,7 +150,7 @@ const people2 = [
     }
 ];
 let oldestPerson ='';
-let ageBig= 0;
+let ageBig = 0;
 people2.forEach(people=>{
     if(people.age > ageBig ){
         ageBig = people.age;
