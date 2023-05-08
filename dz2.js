@@ -115,7 +115,9 @@ let bigNum = 0;
 
 numbers.forEach(num=>{
     if(num%3==0){
+        if(bigNum<num){
         bigNum = num;
+        }
     }
 })
 console.log(bigNum);
