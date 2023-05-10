@@ -5,7 +5,7 @@ const numsArray = [1, 12, 34, 71, 14, 12, 33, 70, 82, 81, 9, 19, 90];
 let sum = 0;
 
 numsArray.forEach(num => {
-    if(num%2==0){
+    if(num%2===0){
         sum += num
     }
 })
@@ -98,7 +98,7 @@ const books = [
 const newBooks = [];
 
 books.forEach(book=>{
-    if(book.release==2023){
+    if(book.release===2023){
         newBooks.push({
             author: book.author,
             title: book.title,
@@ -113,14 +113,23 @@ console.log(newBooks);
 const numbers = [3, 15, 23, 56, 66, 71, 12, 90];
 let bigNum = 0;
 
+
+//-----------v1
 numbers.forEach(num=>{
-    if(num%3==0){
+    if(num%3===0){
         if(bigNum<num){
         bigNum = num;
         }
     }
 })
-console.log(bigNum);
+
+//----------v2
+// numbers.forEach(num=>{
+//     if(num%3===0 && bigNum<num ){
+//         bigNum = num;
+//     }
+// })
+// console.log(bigNum);
 
 
 // напишите программу которая найдёт самого старшего человека в данном массиве с объектами
@@ -151,6 +160,9 @@ const people2 = [
         age: 17
     }
 ];
+
+
+//--------------v1
 let oldestPerson ='';
 let ageBig = 0;
 people2.forEach(people=>{
@@ -159,4 +171,17 @@ people2.forEach(people=>{
         oldestPerson = people.name;
     }
 })
+
+// //----------------- v2
+// let oldestPerson ;
+// people2.forEach(people=>{
+//     if(!oldestPerson){
+//         oldestPerson = people;
+//     }
+//     if(people.age > oldestPerson.age){
+//         oldestPerson =people;
+//     }
+// })
+// //----------------
+
 console.log(oldestPerson);
