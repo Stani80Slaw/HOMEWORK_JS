@@ -37,24 +37,41 @@ console.log(sumNumer2(20,40));
 
 
 
-// --------------------------------------------*** решение не полное --------------------------------
+//-----------------------------------------------------------------------------------
 // Напишите программу которая проверит длину каждого имя в массиве
 // Если длина меньше или равна 5 символам - добавить в массив shortNames
 // *** Сложное *** удалить это же имя из массива users
 // Решение задачи с удалением из массива
 
+//const users = ['Jack', 'Mariah', 'Sarah', 'Jonathan', 'Piere', 'Bob', 'Samantha', 'Mary'];
+// -----------------------------*** решение не полное --------------------------------
+// const shortNames =[];
+// let numNames = 0;
+// users.forEach (name =>{
+//     if(name.length <=5){
+//         shortNames.push(name);
+//         delete users[numNames];
+//         numNames ++;
+//     }
+//     else{numNames++;}
+// })
+// console.log(shortNames,);
+// console.log(users);
+
+
+// --------- правельное Решение задачи с удалением из массива ------------------------
+
 const users = ['Jack', 'Mariah', 'Sarah', 'Jonathan', 'Piere', 'Bob', 'Samantha', 'Mary'];
 const shortNames =[];
-let numNames = 0;
-users.forEach (name =>{
+const newUsers = users.slice();
+
+newUsers.forEach (name =>{
     if(name.length <=5){
         shortNames.push(name);
-        delete users[numNames];
-        numNames ++;
+        users.splice(users.indexOf(name),1);
     }
-    else{numNames++;}
 })
-console.log(shortNames,);
+console.log(shortNames);
 console.log(users);
 
 
