@@ -14,8 +14,6 @@ function sumNumer(numA, numB){
         numB=invertNumber(numB);
     }
     return numA+numB;
-        console.log(numA+numB);
-    console.log(numA+numB);
 }
 console.log(sumNumer(-20,10));
 
@@ -119,14 +117,14 @@ const myCar = {
     popular: false,
     mileage: 89425,
 }
-function popularCar (Car){
+function popularCar (car){
     let popular = '';
     let warranty = '';
-    if(Car.popular == false){
+    if(car.popular == false){
         popular = 'is not popular';
     }
     else{popular = 'is popular'}
-    if(Car.mileage >100000){
+    if(car.mileage >100000){
         warranty = 'It is not';
     }
     else{warranty = 'It is'}
